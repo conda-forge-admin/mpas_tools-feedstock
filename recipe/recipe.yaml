@@ -30,27 +30,25 @@ requirements:
     - pkgconfig
   host:
     - python
+    - pip
+    - if: osx
+      then: llvm-openmp
+    - setuptools >=60
     - hdf5
     - hdf5 * nompi_*
     - libnetcdf
     - libnetcdf * nompi_*
     - netcdf-fortran
     - netcdf-fortran * nompi_*
-    - setuptools
-    - pip
     - netcdf4
-    - if: osx
-      then: llvm-openmp
   run:
     - python
     - cartopy
     - cmocean
     - dask
-    - geometric_features >=1.6.3,<2.0.0
     - h5py
     - inpoly
     - matplotlib-base >=3.9.0
-    - nco
     - netcdf4
     - networkx
     - numpy >=2.0,<3.0
@@ -65,6 +63,8 @@ requirements:
     - shapely >=2.0,<3.0
     - tqdm
     - xarray
+    - geometric_features >=1.6.3,<2.0.0
+    - nco
 
 tests:
   - python:
