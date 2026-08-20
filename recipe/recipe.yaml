@@ -48,6 +48,7 @@ requirements:
     - dask-core
     - h5py
     - inpoly
+    - jinja2
     - matplotlib-base >=3.9.0
     - netcdf4
     - networkx
@@ -131,6 +132,7 @@ tests:
     requirements:
       run:
         - pytest
+        - pyyaml
         - requests
     files:
       source:
